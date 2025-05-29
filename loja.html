@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>30k Drinks - Loja Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #1a1a1a;
+      --azul: #00bfff;
+      --dourado: #d4af37;
+      --branco: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: var(--bg);
+      color: var(--branco);
+    }
+
+    header {
+      background: var(--card);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--azul);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--dourado);
+    }
+
+    nav a {
+      color: var(--branco);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(145deg, #0a0a0a, #111);
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: var(--dourado);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--azul);
+      font-size: 1.1rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .product-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(0, 191, 255, 0.08);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+    }
+
+    .product-card img {
+      width: fit-content;
+      margin: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin-top: 0.8rem;
+      color: var(--azul);
+      font-size: 1.2rem;
+    }
+
+    .product-card p {
+      color: var(--branco);
+      margin: 0.5rem 0;
+    }
+
+    .product-card button {
+      background: var(--dourado);
+      color: black;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .product-card button:hover {
+      background: #ffd700;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--card);
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍾 30k Drinks</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Bebidas direto da máfia 😏</h2>
+    <p>Peça agora com nossos afiliados e receba em minutos!</p>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQMtqFPMda994ZIeXv7vw5RGoehtQDA4Xxwxm5xPnOG1qIPDZAR3G0FSKc9UO9gdNToijwDOuqbKsJAdZfJGrTZyq0-8MWP5h80VlQWzAbqsJR0msmMzm8k9mL-7aVTJiA4GpVXTs2Bmzw&usqp=CAc" alt="Vodka">
+      <h3>Vodka Premium</h3>
+      <p>R$ 59,90</p>
+      <button onclick="pedirAgora('Vodka Premium')">Pedir agora</button>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQMtqFPMda994ZIeXv7vw5RGoehtQDA4Xxwxm5xPnOG1qIPDZAR3G0FSKc9UO9gdNToijwDOuqbKsJAdZfJGrTZyq0-8MWP5h80VlQWzAbqsJR0msmMzm8k9mL-7aVTJiA4GpVXTs2Bmzw&usqp=CAc" alt="Gin">
+      <h3>Gin Rosa</h3>
+      <p>R$ 69,90</p>
+      <button onclick="pedirAgora('Gin Rosa')">Pedir agora</button>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQMtqFPMda994ZIeXv7vw5RGoehtQDA4Xxwxm5xPnOG1qIPDZAR3G0FSKc9UO9gdNToijwDOuqbKsJAdZfJGrTZyq0-8MWP5h80VlQWzAbqsJR0msmMzm8k9mL-7aVTJiA4GpVXTs2Bmzw&usqp=CAc" alt="Energetico">
+      <h3>Energético Dark</h3>
+      <p>R$ 9,90</p>
+      <button onclick="pedirAgora('Energético Dark')">Pedir agora</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Máfia 30k - Todos os direitos reservados
+  </footer>
+
+  <script>
+    function pedirAgora(produto) {
+      const linkWhatsApp = `https://wa.me/5599999999999?text=Quero%20comprar%20${encodeURIComponent(produto)}%20pela%2030k%20Drinks!`;
+      window.open(linkWhatsApp, '_blank');
+    }
+  </script>
+
+</body>
+</html>
