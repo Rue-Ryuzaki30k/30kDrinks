@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/perfil.css">
+  <title>30K Drinks | Painel do Afiliado</title>
+  
+</head>
+<body>
+  <header>
+    <h1><span class="gold">30K</span> Painel do Afiliado</h1>
+  </header>
+
+  <main>
+    <div class="perfil">
+      <img src="../img/ayano30k.webp" alt="Afiliado">
+      <h2>Ayano30K CEO</h2>
+      <p>Afiliado Oficial</p>
+      <p>ID: 30K-001F</p>
+    </div>
+
+    <div class="painel">
+      <div class="card">
+        <h3>Vendas Hoje</h3>
+        <p>R$ <span id="vendas">00,00</span></p>
+      </div>
+      <div class="card">
+        <h3>Fiado a Receber</h3>
+        <p>R$ <span id="fiado">00,00</span></p>
+      </div>
+      <div class="card">
+        <h3>Comissão </h3>
+        <p><span id="pedidos">00,00</span></p>
+      </div>
+    </div>
+
+    <div class="link-vendas">
+      <h3>Seu link de vendas:</h3>
+      <input type="text" value="" id="link" readonly>
+      <br>
+      <button onclick="copiarLink()">Copiar Link</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 30K Drinks • Todos os direitos reservados
+  </footer>
+
+  <script>
+    function copiarLink() {
+      const linkInput = document.getElementById("link");
+      linkInput.select();
+      linkInput.setSelectionRange(0, 99999); // para mobile
+      document.execCommand("copy");
+      alert("Link copiado com sucesso!");
+    }
+  </script>
+</body>
+</html>

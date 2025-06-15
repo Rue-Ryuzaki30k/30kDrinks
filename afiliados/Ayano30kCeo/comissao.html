@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/comissao.css">
+  <title>Comissão - 30K Drinks</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Comissão</h1>
+    <div class="id">Afiliado: usuário | ID: #00-000F</div>
+
+    <div class="total-mes" id="saldoTotal">Total no mês: R$ <span id="saldo">00,00</span></div>
+
+    
+    <div class="comissao-dia"><span class="dia">07/06</span><span class="valor">R$ 75,00</span></div>
+
+    <div class="saque">
+      <h2>Solicitar Saque</h2>
+      <label for="valor">Valor (R$):</label>
+      <input type="number" id="valor" min="10" max="385" value="0" placeholder="Ex: 100">
+
+      <button onclick="solicitarSaque()">Solicitar</button>
+      
+    </div>
+  </div>
+
+  
+ <script src="script/bancodedadosAfiliado.js"></script>
+</body>
+</html>

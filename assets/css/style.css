@@ -1,0 +1,165 @@
+:root {
+      --neon: #ff2a8b;
+      --gold: #ffd700;
+      --bg: #0b0b10;
+      --text: #f2f2f2;
+      --glass: rgba(255, 255, 255, 0.04);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #05010a, #0c0c13);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--bg);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--neon);
+      box-shadow: 0 0 10px var(--neon);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--gold);
+      text-shadow: 0 0 10px var(--gold);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--neon);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--neon);
+      text-shadow: 0 0 12px var(--neon);
+    }
+
+    .hero p {
+      max-width: 500px;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .hero button {
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background: var(--neon);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px var(--neon);
+      transition: background 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #ff55aa;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+    }
+
+    .produto {
+      background: var(--glass);
+      border: 1px solid var(--neon);
+      border-radius: 12px;
+      padding: 1rem;
+      width: 160px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      color: var(--text);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .produto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px var(--neon);
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produto h4 {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .produto p {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .produto {
+        width: 90%;
+      }
+    }
